@@ -1,0 +1,12 @@
+{
+  "name": "async-all",
+  "version": "1.0.0",
+  "description": "多异步处理方法，类似与promise.all",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
