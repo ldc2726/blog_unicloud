@@ -1,0 +1,23 @@
+{
+	"name": "uni-cloud-router-demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"uni-cloud-router": "file:../common/uni-cloud-router",
+		"uni-config-center": "file:../../../uni_modules/uni-config-center/uniCloud/cloudfunctions/common/uni-config-center",
+		"uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+	},
+	"cloudfunction-config": {
+		"concurrency": 100,
+		"memorySize": 512,
+		"timeout": 8,
+		"path":"/http/msgLog"
+	}
+}

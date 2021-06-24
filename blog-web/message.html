@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="blog.decong.icu" />
+    <meta name="robots" content="all" />
+	<meta name="referrer" content="no-referrer">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta http-equiv="cache" content="no-cache">
+    <meta http-equiv="expires" CONTENT="Wed, 26 Feb 2017 08:21:57 GMT">
+    <title>留言板</title>
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/layui.css" />
+    <link rel="stylesheet" href="static/css/master.css" />
+    <link rel="stylesheet" href="static/css/gloable.css" />
+    <link rel="stylesheet" href="static/css/nprogress.css" />
+    <link rel="stylesheet" href="static/css/message.css" /> 
+    <link rel="stylesheet" href="static/css/config.css" />
+</head>
+<body>
+    <div class="header">
+    </div>
+    <header class="gird-header">
+        <div class="header-fixed">
+            <div class="header-inner">
+                <a href="javascript:void(0)" class="header-logo" id="logo">Mr.li</a>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="article.html">博客</a></li>
+                        <li><a href="message.html">留言</a></li>
+						<li><a href="diary.html">日记</a></li>
+                        <li><a href="link.html">友链</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="blog-user">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a class="phone-menu">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="doc-container" id="doc-container">
+        <div class="container-fixed">
+    <div class="container-inner">
+        <section class="msg-remark">
+            <h1>留言板</h1>
+            <p>
+                沟通交流，拉近你我！
+            </p>
+        </section>
+        <div class="textarea-wrap message" id="textarea-wrap">
+            <form class="layui-form blog-editor" action="javascript:;">
+                <div class="layui-form-item">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入您的昵称" autocomplete="off" class="layui-input layui-input-name">
+                    <br>
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入您的联系方式，如email" autocomplete="off" class="layui-input layui-input-email">
+                </div>
+                <div class="layui-form-item">
+                    <textarea name="editorContent" required lay-verify="content" id="remarkEditor" placeholder="请输入内容" class="layui-textarea layui-hide"></textarea>
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn" lay-submit="formLeaveMessage" lay-filter="formLeaveMessage">双击提交留言</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="f-cb"></div>
+    <div class="mt20">
+        <ul class="message-list" id="message-list">
+            <!-- <li class="zoomIn article"> 
+                <div class="comment-parent">
+                    <a name="remark-1"></a>
+                    <img src="static/picture/t2.png" />
+                    <div class="info">
+                        <span class="username">冰</span>
+                    </div>
+                    <div class="comment-content">
+                        大哥带一下
+                    </div>
+                    <p class="info info-footer">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>深圳</span> 
+                        <span class="comment-time">2020-07-01</span>
+                        <a href="javascript:;" class="btn-reply" data-targetid="1" data-targetname="冰">回复</a>
+                    </p>
+                </div>
+                <hr />
+                <div class="comment-child"> 
+                    <a name="reply-1"></a> 
+                    <img src="static/picture/admin_img.png"> 
+                    <div class="info"> 
+                        <span class="username">小刘</span> 
+                        <span style="padding-right:0;margin-left:-5px;">回复</span> 
+                        <span class="username">冰</span> 
+                        <span>哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或</span> 
+                    </div> 
+                    <p class="info"> 
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>深圳</span> 
+                        <span class="comment-time">2018-01-01</span> 
+                        <a href="javascript:;" class="btn-reply" data-targetid="2" data-targetname="小刘">回复</a>
+                    </p> 
+                </div> 
+                <div class="replycontainer layui-hide"> 
+                    <form class="layui-form" action=""> 
+                        <input type="hidden" name="remarkId" value="1"> 
+                        <input type="hidden" name="targetUserId" value="0"> 
+                        <div class="layui-form-item"> 
+                            <textarea name="replyContent" lay-verify="replyContent" placeholder="请输入回复内容" class="layui-textarea" style="min-height:80px;"></textarea> 
+                        </div> 
+                        <div class="layui-form-item"> 
+                            <button class="layui-btn layui-btn-xs" lay-submit="formReply" lay-filter="formReply">提交</button> 
+                        </div> 
+                    </form> 
+                </div>
+            </li>
+            <li class="zoomIn article"> 
+                <div class="comment-parent">
+                    <a name="remark-1"></a>
+                    <img src="static/picture/t2.png" alt="{{name}}" />
+                    <div class="info">
+                        <span class="username">冰</span>
+                    </div>
+                    <div class="comment-content">
+                       一天很短，开心了就笑，不开心了就过会儿再笑。
+                    </div>
+                    <p class="info info-footer">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>深圳</span> 
+                        <span class="comment-time">2018-01-01</span>
+                        <a href="javascript:;" class="btn-reply" data-targetid="1" data-targetname="冰">回复</a>
+                    </p>
+                </div>
+                <div class="replycontainer layui-hide"> 
+                    <form class="layui-form" action=""> 
+                        <input type="hidden" name="remarkId" value="1"> 
+                        <input type="hidden" name="targetUserId" value="0"> 
+                        <div class="layui-form-item"> 
+                            <textarea name="replyContent" lay-verify="replyContent" placeholder="请输入回复内容" class="layui-textarea" style="min-height:80px;"></textarea> 
+                        </div> 
+                        <div class="layui-form-item"> 
+                            <button class="layui-btn layui-btn-xs" lay-submit="formReply" lay-filter="formReply">提交</button> 
+                        </div> 
+                    </form> 
+                </div>
+            </li>
+            <li class="zoomIn article"> 
+                <div class="comment-parent">
+                    <a name="remark-1"></a>
+                    <img src="static/picture/admin_img.png"/>
+                    <div class="info">
+                        <span class="username">小刘</span>
+                    </div>
+                    <div class="comment-content">
+                        哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或
+                    </div>
+                    <p class="info info-footer">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>深圳</span> 
+                        <span class="comment-time">2018-01-01</span>
+                        <a href="javascript:;" class="btn-reply" data-targetid="1" data-targetname="小刘">回复</a>
+                    </p>
+                </div>
+                <hr />
+                <div class="replycontainer layui-hide"> 
+                    <form class="layui-form" action=""> 
+                        <input type="hidden" name="remarkId" value="1"> 
+                        <input type="hidden" name="targetUserId" value="0"> 
+                        <div class="layui-form-item"> 
+                            <textarea name="replyContent" lay-verify="replyContent" placeholder="请输入回复内容" class="layui-textarea" style="min-height:80px;"></textarea> 
+                        </div> 
+                        <div class="layui-form-item"> 
+                            <button class="layui-btn layui-btn-xs" lay-submit="formReply" lay-filter="formReply">提交</button> 
+                        </div> 
+                    </form> 
+                </div>
+            </li> -->
+        </ul>
+    </div>
+</div>
+    </div>
+    <footer class="grid-footer">
+        <div class="footer-fixed">
+            <div class="copyright">
+                <div class="info">
+                    <div class="contact">
+                        <a href="https://github.com/ldc2726" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                        <a href="https://wpa.qq.com/msgrd?v=3&uin=940093547&site=qq&menu=yes" class="qq" target="_blank" title="930054439"><i class="fa fa-qq"></i></a>
+                        <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ldc27261@gmail.com" class="email" target="_blank" title="ldc27261@gmail.com"><i class="fa fa-envelope"></i></a>
+                        <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+                    </div>
+                    <p class="mt05">
+                        Copyright &copy; 2021-2022 LDC个人博客 All Rights Reserved V.1.0 <a href="https://www.beian.miit.gov.cn" target="blank" class="tiao">沪ICP备2021008871</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/layui.js"></script>
+    <script src="static/js/gloable.js"></script>
+    <script src="static/js/nprogress.js"></script>
+    <script>NProgress.start();</script>
+    <script src="static/js/pagemessage.js"></script>
+    <script>NProgress.start();</script>
+    <script> 
+        window.onload = function () {
+            NProgress.done();
+        };
+    </script>
+    <script src="static/js/jquery.min.js"></script>
+	<script src="static/js/config.js?v=1"></script>
+	<script src="static/js/http/common.js?v=1"></script>
+	<script src="static/js/http/msg.js"></script>
+</body>
+</html>

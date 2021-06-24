@@ -1,0 +1,73 @@
+// 本文件中的json内容将在云函数【运行】时作为参数传给云函数。
+// 配置教程参考：https://uniapp.dcloud.net.cn/uniCloud/quickstart?id=runparam
+// {
+// 	"action":"/diary/remove",
+// 	"id":"6069720889135a00016f8fe1",
+// 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MDY0NTY1Yjg3ODFhNTAwMDFmNjRlMjQiLCJyb2xlIjoiMSIsInBlcm1pc3Npb24iOltdLCJjbGllbnRJZCI6IjU2NTkzMzI5NWQ2YmU0MjEzODQ1ZjgwOGNhMDg3M2I2IiwiaWF0IjoxNjE3NTE5NDE3LCJleHAiOjE2MTc1OTE0MTd9.iRBHlG-Gz_ddxj4mcTBV6p0etxnfCvcrbVPrblUQiAI"
+// }
+
+// {
+// 	"action":"/diary/add",
+// 	"id":"6069720889135a00016f8fe1",
+// 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MDY0NTY1Yjg3ODFhNTAwMDFmNjRlMjQiLCJyb2xlIjoiMSIsInBlcm1pc3Npb24iOltdLCJjbGllbnRJZCI6IjU2NTkzMzI5NWQ2YmU0MjEzODQ1ZjgwOGNhMDg3M2I2IiwiaWF0IjoxNjE3NTE5NDE3LCJleHAiOjE2MTc1OTE0MTd9.iRBHlG-Gz_ddxj4mcTBV6p0etxnfCvcrbVPrblUQiAI",
+// 	"content":111
+// }
+
+// {
+// 	"action":"/diary/update",
+// 	"id":"6069720889135a00016f8fe1",
+// 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MDY0NTY1Yjg3ODFhNTAwMDFmNjRlMjQiLCJyb2xlIjoiMSIsInBlcm1pc3Npb24iOltdLCJjbGllbnRJZCI6IjU2NTkzMzI5NWQ2YmU0MjEzODQ1ZjgwOGNhMDg3M2I2IiwiaWF0IjoxNjE3NTE5NDE3LCJleHAiOjE2MTc1OTE0MTd9.iRBHlG-Gz_ddxj4mcTBV6p0etxnfCvcrbVPrblUQiAI",
+// 	"content":111
+// }
+
+// {
+// 	"action":"/diary/getListAuth",
+// 	"page":1,
+// 	"size":10,
+// 	"userid":"6064565b8781a50001f64e24"
+// }
+
+//新增留言
+// {
+// 	"action":"/msg/addAuth",
+// 	"userid":"6064565b8781a50001f64e24",
+// 	"blog_id":"",
+// 	"content":"请问大佬这个问题是什么",
+// 	"contact":"随缘",
+// 	"email":"ldc2726@gamil.com",
+// 	"create_address":"",
+// 	"is_reply":false,
+// 	"feedback_id":""
+// }
+
+//获取留言列表
+
+// {
+// 	"action":"/msg/getListAuth",
+// 	"userid":"6064565b8781a50001f64e24",
+// 	"blog_id":"",
+// 	"email":""
+// }
+
+// {
+// 	"action":"/articles/getListAuth",
+// 	"page": 1,
+// 	"size": 10,
+// 	"userid": "6064565b8781a50001f64e24",
+// 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MDY0NTY1Yjg3ODFhNTAwMDFmNjRlMjQiLCJyb2xlIjoiMSIsInBlcm1pc3Npb24iOltdLCJjbGllbnRJZCI6IjUyYzJmZjg0MTA1NmZiYWMzMWM5YmU5NTc3ZThmNDA0IiwiaWF0IjoxNjE3NTA5ODQ4LCJleHAiOjE2MTc1ODE4NDh9.kKLBH0bUGPy9C7yNeeRPQxxUD4-eoMVHmgthN_CdM-8"
+// }
+
+{
+	"action":"/articles/update",
+	"title": "777",
+	"content": "<p>888s</p>",
+	"category_id": [],
+	"excerpt": "",
+	"article_status": 1,
+	"tag": ["web"],
+	"is_sticky": false,
+	"comment_status": 1,
+	"avatar": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-4ad780fd-7314-43e9-a81f-5daac4f25b07/a1dae4ec-4ca7-47ce-85c4-176475ab0616.jpeg",
+	"_id": "606a9f4ee4e0b30001e817b5",
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MDY0NTY1Yjg3ODFhNTAwMDFmNjRlMjQiLCJyb2xlIjoiMSIsInBlcm1pc3Npb24iOltdLCJjbGllbnRJZCI6IjU2NTkzMzI5NWQ2YmU0MjEzODQ1ZjgwOGNhMDg3M2I2IiwiaWF0IjoxNjE3NjAwNDUwLCJleHAiOjE2MTc2NzI0NTB9.G7eXWX7oXUnlZvoCqUnD927f1F4Sko-l6xjpb4fqbCc"
+}
